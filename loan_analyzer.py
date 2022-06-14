@@ -102,7 +102,7 @@ for loan in loans:
     if loan["loan_price"] <= 500:
         #adding the inexpensive loans to the list
         inexpensive_loans.append(loan)        
-print(inexpensive_loans)
+print("List of inexpensive loans: ",inexpensive_loans)
 
 
 
@@ -119,6 +119,7 @@ with open(output_path, 'w', newline='') as output_file:
     for loan in inexpensive_loans:
         #writing the inexpensive loans to the file
         csvwriter.writerow(loan.values())
+print("Inexpensive loans written to inexpensive_loans.csv file")
 
 
 
